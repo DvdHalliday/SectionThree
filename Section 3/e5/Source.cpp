@@ -10,7 +10,7 @@ int main() {
 			std::cout  << std::endl << "Total numbers entered: " << i << std::endl << "Total sum of numbers entered: " << sum << std::endl;
 			return 0;
 		}
-		numbers[i] = 
+		numbers[i] = number;
 		sum += number;
 	}
 	std::cout << "You have filled the array thoroughly." << std::endl;
