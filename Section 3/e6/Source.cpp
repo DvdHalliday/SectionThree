@@ -37,20 +37,6 @@ int main() {
 				if (std::cin.peek() == '\n') return entered(size, sum);
 				std::cin >> number;
 			}
-			if (size == 5) {
-				numbers[5] = number;
-				sum += number;
-				size++;
-				break;
-			}
-			else {
-				numbers[size] = number;
-				size++;
-				sum += number;
-				std::cin.clear();
-				std::cin.ignore(INT_MAX, '\n');
-				continue;
-			}
 		}
 		std::cin.clear();
 		std::cin.ignore(INT_MAX, '\n');

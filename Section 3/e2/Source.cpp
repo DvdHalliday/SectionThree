@@ -10,7 +10,7 @@ int getAwardedPointsFromAnswer(bool isCorrectAnswer, bool actualAnswer) {
 	return (isCorrectAnswer == actualAnswer) ? 1 : 0;
 }
 
-int questioner(int index, std::string question) {
+int getPointsFromQuestion(int index, std::string question) {
 	char answer;
 	int counter = 0;
 	do {
@@ -43,8 +43,8 @@ int questioner(int index, std::string question) {
 int main() {
 	int grade = 0;
 	std::cout << "Welcome to your quiz! Answer T or F\n\n";
-	grade += questioner(1, "Are avocados fruits?");
-	grade += questioner(2, "Is the sky blue?");
-	grade += questioner(3, "Is Teravision the Best.Team.Ever?");
+	grade += getPointsFromQuestion(1, "Are avocados fruits?");
+	grade += getPointsFromQuestion(2, "Is the sky blue?");
+	grade += getPointsFromQuestion(3, "Is Teravision the Best.Team.Ever?");
 	std::cout << "You got " << grade << "/3 correct answers! Your final grade is: " << grade * 5 / 3.0f << std::endl;
 }
