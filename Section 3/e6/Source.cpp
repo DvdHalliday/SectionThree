@@ -9,9 +9,8 @@
 
 //Hint: You’ll need to look up stuff here, too.How would you detect invalid inputand an enter key press.
 
-int entered(int amountOfItems, int sum) {
+void printResult(int amountOfItems, int sum) {
 	std::cout << std::endl << "Total numbers entered: " << amountOfItems << std::endl << "Total sum of numbers entered: " << sum << std::endl;
-	return 0;
 }
 
 int main() {
@@ -19,7 +18,10 @@ int main() {
 	float number;
 	for (int i = 0; size < 6; i++) {
 		std::cout << "Enter a number if you want or press Enter to finish: ";
-		if (std::cin.peek() == '\n') return entered(size, sum);
+		if (std::cin.peek() == '\n') {
+			printResult(size, sum);
+			return 0;
+		}
 		std::cin >> number;
 
 		if (!std::cin.good() || (number - floor(number) != 0.0f)) {
@@ -27,14 +29,20 @@ int main() {
 			std::cin.clear();
 			std::cin.ignore(INT_MAX, '\n');
 			std::cout << "Enter a number if you want or press Enter to finish: ";
-			if (std::cin.peek() == '\n') return entered(size, sum);
+			if (std::cin.peek() == '\n') {
+				printResult(size, sum);
+				return 0;
+			}
 			std::cin >> number;
 
 			while (!std::cin.good() || (number - floor(number) != 0.0f)) { 
 				std::cin.clear();
 				std::cin.ignore(INT_MAX, '\n');
 				std::cout << "Enter a number if you want or press Enter to finish: ";
-				if (std::cin.peek() == '\n') return entered(size, sum);
+				if (std::cin.peek() == '\n') {
+					printResult(size, sum);
+					return 0;
+				}
 				std::cin >> number;
 			}
 		}

@@ -12,9 +12,6 @@ int main() {
 	int lotteryResults[5], lotteryBet[5], winnings = 0, temporaryLotteryResult;
 	std::srand(std::time(0));
 	std::cout << "Welcome to the lottery!\n";
-	//lotteryResults[0] = 2;
-	//std::cout << isElementInArray(3, lotteryResults);
-
 	for (int i = 0; i < 5; i++) {
 		do {
 			temporaryLotteryResult = (rand() % 20) + 1;
