@@ -1,9 +1,9 @@
 #include <iostream>
 
-int grader(bool test) {//If the answer to the question is 0, add a ! before the bool when calling this function
-	std::string response = (test) ? "CORRECT! Looks like you have common sense." : "WRONG! How could you miss that??";
+int getAwardedPointsFromAnswer(bool isCorrectAnswer, bool actualAnswer) {
+	std::string response = (isCorrectAnswer == actualAnswer) ? "CORRECT! Looks like you have common sense." : "WRONG! How could you miss that??";
 	std::cout << response << "\n" << std::endl;
-	return (test) ? 1 : 0;
+	return (isCorrectAnswer == actualAnswer) ? 1 : 0;
 }
 
 int questioner(int index, std::string question) {
@@ -33,7 +33,7 @@ int questioner(int index, std::string question) {
 			}
 		}
 	} while (!std::cin.good() || (answer != 'T' && answer != 'F'));
-	return grader((answer == 'T') ? 1 : 0);
+	return getAwardedPointsFromAnswer((answer == 'T') ? 1 : 0,1);
 }
 
 int main() {

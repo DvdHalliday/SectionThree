@@ -1,7 +1,7 @@
 #include <iostream>
 
-int entered(int items, int sum) {
-	std::cout << std::endl << "Total numbers entered: " << items << std::endl << "Total sum of numbers entered: " << sum << std::endl;
+int entered(int amountOfItems, int sum) {
+	std::cout << std::endl << "Total numbers entered: " << amountOfItems << std::endl << "Total sum of numbers entered: " << sum << std::endl;
 	return 0;
 }
 
