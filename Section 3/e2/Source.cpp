@@ -37,7 +37,7 @@ int getPointsFromQuestion(int index, std::string question, bool actualAnswer) {
 			}
 		}
 	} while (!std::cin.good() || (answer != 'T' && answer != 'F'));
-	return getAwardedPointsFromAnswer((answer == 'T') ? true : false, actualAnswer);
+	return getAwardedPointsFromAnswer(answer == 'T', actualAnswer);
 }
 
 int main() {
