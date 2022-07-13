@@ -1,5 +1,10 @@
 #include <iostream>
 
+//Exercise 5 - Arrays
+//Create an array of whatever size you want.Let the user input as many numbers as they want and populate the array with them.If they enter any invalid input, output the whole array of numbersand the sum of them alland the total numbers they input.
+//If the user exceeds the size of your array, tell them about itand then output the information.
+
+
 int main() {
 	int numbers[6], sum=0;
 	float number;

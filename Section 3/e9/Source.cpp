@@ -1,5 +1,13 @@
 #include <iostream>
 
+//Exercise 9 - String Reversal
+//We’ve seen that strings are just arrays of characters.Create a char array and initialize it with any message.The char array should have a size of 30 independently of the size of your string.Output your string and reverse it using a loopand a second char array, then output the reversed string.
+
+//Do not hard code the size of your string when looping through it.
+
+//Do this twice: one time initializing the string with double quotes, and another time initializing it with single characters.
+
+
 void stringReverser(char originalString[],char newString[]) {
 	for (int i = 0; i < std::strlen(originalString); i++) {
 		newString[std::strlen(originalString) - i -1] = originalString[i];

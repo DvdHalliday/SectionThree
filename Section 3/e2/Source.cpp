@@ -1,5 +1,9 @@
 #include <iostream>
 
+//Exercise 2 - More Input Validation
+//Rewrite the true or false quiz you did in the previous section.This time, instead of asking for 1 or 2 as inputs, ask them to answer T or F.If they enter invalid input, give them a couple of tries before you automatically fail them.
+
+
 int getAwardedPointsFromAnswer(bool isCorrectAnswer, bool actualAnswer) {
 	std::string response = (isCorrectAnswer == actualAnswer) ? "CORRECT! Looks like you have common sense." : "WRONG! How could you miss that??";
 	std::cout << response << "\n" << std::endl;

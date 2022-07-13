@@ -1,5 +1,14 @@
 #include <iostream>
 
+//Exercise 6 - Arrays improved!
+//Rewrite the previous exercise, but this time only exit the application if the user inputs the ENTER key or when they exceed the max amount of numbers.
+
+//If the user enters any invalid input, tell them that they’ve entered an invalid inputand that they must enter a number.
+
+//If the user just hits ENTER when asked for a number, output the same information as the previous exercise.
+
+//Hint: You’ll need to look up stuff here, too.How would you detect invalid inputand an enter key press.
+
 int entered(int amountOfItems, int sum) {
 	std::cout << std::endl << "Total numbers entered: " << amountOfItems << std::endl << "Total sum of numbers entered: " << sum << std::endl;
 	return 0;
